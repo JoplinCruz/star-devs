@@ -17,4 +17,8 @@
     .lista-personagens {
         height: 480px;
     }
+
+    .cartao .nome {
+        font-size: 14px;
+    }
 }
