@@ -6,10 +6,9 @@ let cartaoAtual = 0
 
 btnAvancar.addEventListener("click", function () {
 
-    if (cartaoAtual === cartoes.length - 1) return;
-
     esconderCartaoSelecionado();
     cartaoAtual++;
+    cartaoAtual = cartaoAtual > cartoes.length - 1 ? 0 : cartaoAtual;
     mostrarCartao();
 
 });
@@ -17,10 +16,9 @@ btnAvancar.addEventListener("click", function () {
 
 btnVoltar.addEventListener("click", function () {
 
-    if (cartaoAtual == 0) return;
-
     esconderCartaoSelecionado();
     cartaoAtual--;
+    cartaoAtual = cartaoAtual < 0 ? cartoes.length - 1 : cartaoAtual;
     mostrarCartao();
 
 });
